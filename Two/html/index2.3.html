@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <title>SoC Students' details table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#name").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#table tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+    });
+    </script>
+</head>
+<body>
+    <h1>Summer Of Code Participants' Details</h1>
+    Enter the Name to be searched:<input type="text" id="name"><br><br>
+    <hr>
+    <table border="1" id="table">
+        <tr>
+            <th>Name</th>
+            <th>Roll No.</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>Nikhil Chandra</td>
+            <td>180974</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Sarthak Chandani</td>
+            <td>180345</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Yash Kumar</td>
+            <td>170345</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Somu Prajapati</td>
+            <td>180772</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Shivani Choudhary</td>
+            <td>170657</td>
+            <td>2</td>
+        </tr>
+        
+    </table><br>
+</body>
